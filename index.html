@@ -16,7 +16,7 @@
     <!-- Connection Link of Custom Vanilla CSS -->
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="bg-black">
+  <body class="bg-gray-900">
     <!-- header part started from here -->
     <header>
       <div
@@ -102,7 +102,11 @@
               </p>
             </div>
           </div>
-          <div class="">4</div>
+          <!-- Selected Five -->
+          <div class="bg-blue-900 text-white">
+            <h1 class="text-center text-2xl my-4 underline underline-offset-8">Selected - V</h1>
+            <ol></ol>
+          </div>
           <div
             class="bg-black h-96 text-white border-solid border-2 border-slate-200"
           >
@@ -160,7 +164,17 @@
               </p>
             </div>
           </div>
-          <div class="bg-black text-white">8</div>
+          <!-- Budget -->
+          <div class="bg-blue-900 text-white">
+            <h1 class="text-center text-2xl my-4 underline underline-offset-8">Budget</h1>
+            <p class="w-9/12 mx-auto mt-4 flex justify-between"><span>Per Player</span><input class="w-1/2 py-1 px-2 bg-white text-black" type="text"></p>
+            <button class="bg-gray-500 block hover:bg-gray-700 my-4 w-8/12 mx-auto py-1">Calculate</button>
+            <p class="w-9/12 mx-auto flex justify-between"><span>Player Expenses</span><span></span></p>
+            <p class="w-9/12 mx-auto mt-4 flex justify-between"><span>Manager</span><input class="w-1/2 py-1 px-2 bg-white text-black" type="text"></p>
+            <p class="w-9/12 mx-auto mt-4 flex justify-between"><span>Coach</span><input class="w-1/2 py-1 px-2 bg-white text-black" type="text"></p>
+            <button class="bg-gray-500 block hover:bg-gray-700 my-4 w-8/12 mx-auto py-1">Calculate Total</button>
+            <p class="w-9/12 mx-auto flex justify-between"><span>Total</span><span></span></p>
+          </div>
           <div
             class="bg-black h-96 text-white border-solid border-2 border-slate-200"
           >
@@ -223,6 +237,10 @@
         </div>
       </section>
     </main>
+    <footer>
+      <hr>
+      <p class="text-center text-white my-10">Copyright @ 2022 All Rights Reserved.</p>
+    </footer>
     <!-- main part ended here -->
 
     <script src="js/app.js"></script>

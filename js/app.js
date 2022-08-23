@@ -1,4 +1,5 @@
 const selectedPlayer = [];
+let count = 0;
 function selectButton(button) {
   const playerName = button.parentNode.parentNode.children[0].innerText;
   selectedPlayer.push(playerName);
@@ -22,7 +23,9 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
   // Per Player Salary
   const perPlayerSalary = getElementValue("per-player-salary");
   // Total Player Expenses
-  const totalPlayerExpenses = perPlayerSalary * 5;
+  const totalNumberOfPlayer =
+    document.getElementById("selected-five").children.length;
+  const totalPlayerExpenses = perPlayerSalary * totalNumberOfPlayer;
   displayAmount("player-expenses", totalPlayerExpenses);
 });
 // Calculate Total
@@ -32,9 +35,9 @@ document
     // Per Player Salary
     const perPlayerSalary = getElementValue("per-player-salary");
     // Total Player Expenses
-    const numberOfPlayer = document.getElementById("selected-five").children;
-    console.log(numberOfPlayer);
-    const totalPlayerExpenses = perPlayerSalary * 5;
+    const totalNumberOfPlayer =
+      document.getElementById("selected-five").children.length;
+    const totalPlayerExpenses = perPlayerSalary * totalNumberOfPlayer;
     // Manager
     const manager = getElementValue("manager-salary");
     // Coach

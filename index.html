@@ -58,7 +58,7 @@
                 315 Goals <span>|</span> 120 Assist
               </p>
               <p class="text-center pt-2">
-                <button class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
+                <button id="btn-karim-benzema" class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
                   Select
                 </button>
               </p>
@@ -77,7 +77,7 @@
                 69 Goals <span>|</span> 45 Assist
               </p>
               <p class="text-center pt-2">
-                <button class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
+                <button id="btn-vinicius-junior" class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
                   Select
                 </button>
               </p>
@@ -96,7 +96,7 @@
                 15 Goals <span>|</span> 7 Assist
               </p>
               <p class="text-center pt-2">
-                <button class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
+                <button id="btn-eden-hazard" class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
                   Select
                 </button>
               </p>
@@ -104,8 +104,11 @@
           </div>
           <!-- Selected Five -->
           <div class="bg-blue-900 text-white">
-            <h1 class="text-center text-2xl my-4 underline underline-offset-8">Selected - V</h1>
-            <ol></ol>
+            <h1 class="text-start ml-6 text-2xl my-6 underline underline-offset-8">Selected - V</h1>
+            <div class="mt-5 w-8/12 mx-auto">
+              <ol id="selected-five" class="total-element list-decimal leading-loose text-xl">
+              </ol>
+            </div>
           </div>
           <div
             class="bg-black h-96 text-white border-solid border-2 border-slate-200"
@@ -120,7 +123,7 @@
                 105 Goals <span>|</span> 110 Assist
               </p>
               <p class="text-center pt-2">
-                <button class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
+                <button id="btn-luca-modric" class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
                   Select
                 </button>
               </p>
@@ -139,7 +142,7 @@
                 45 Goals <span>|</span> 20 Assist
               </p>
               <p class="text-center pt-2">
-                <button class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
+                <button id="btn-valverde" class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
                   Select
                 </button>
               </p>
@@ -158,7 +161,7 @@
                 115 Goals <span>|</span> 145 Assist
               </p>
               <p class="text-center pt-2">
-                <button class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
+                <button id="btn-toni-kroos" class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
                   Select
                 </button>
               </p>
@@ -167,13 +170,13 @@
           <!-- Budget -->
           <div class="bg-blue-900 text-white">
             <h1 class="text-center text-2xl my-4 underline underline-offset-8">Budget</h1>
-            <p class="w-9/12 mx-auto mt-4 flex justify-between"><span>Per Player</span><input class="w-1/2 py-1 px-2 bg-white text-black" type="text"></p>
-            <button class="bg-gray-500 block hover:bg-gray-700 my-4 w-8/12 mx-auto py-1">Calculate</button>
-            <p class="w-9/12 mx-auto flex justify-between"><span>Player Expenses</span><span></span></p>
-            <p class="w-9/12 mx-auto mt-4 flex justify-between"><span>Manager</span><input class="w-1/2 py-1 px-2 bg-white text-black" type="text"></p>
-            <p class="w-9/12 mx-auto mt-4 flex justify-between"><span>Coach</span><input class="w-1/2 py-1 px-2 bg-white text-black" type="text"></p>
-            <button class="bg-gray-500 block hover:bg-gray-700 my-4 w-8/12 mx-auto py-1">Calculate Total</button>
-            <p class="w-9/12 mx-auto flex justify-between"><span>Total</span><span></span></p>
+            <p class="w-9/12 mx-auto mt-4 flex justify-between"><span>Per Player</span><input id="per-player-salary" class="w-1/2 py-1 bg-white text-black text-center" type="text"></p>
+            <button id="btn-calculate" class="bg-gray-500 block hover:bg-gray-700 my-4 w-8/12 mx-auto py-1">Calculate</button>
+            <p class="w-9/12 mx-auto flex justify-between"><span>Player Expenses</span><span>$<span id="player-expenses"></span></span></p>
+            <p class="w-9/12 mx-auto mt-4 flex justify-between"><span>Manager</span><input id="manager-salary" class="w-1/2 py-1 bg-white text-black text-center" type="text"></p>
+            <p class="w-9/12 mx-auto mt-4 flex justify-between"><span>Coach</span><input id="coach-salary" class="w-1/2 py-1 bg-white text-black text-center" type="text"></p>
+            <button id="btn-calculate-total" class="bg-gray-500 block hover:bg-gray-700 my-4 w-8/12 mx-auto py-1">Calculate Total</button>
+            <p class="w-9/12 mx-auto flex justify-between"><span>Total</span><span>$<span id="total"></span></span></p>
           </div>
           <div
             class="bg-black h-96 text-white border-solid border-2 border-slate-200"
@@ -188,7 +191,7 @@
                 95 Goals <span>|</span> 129 Assist
               </p>
               <p class="text-center pt-2">
-                <button class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
+                <button id="btn-daniel-carvajal" class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
                   Select
                 </button>
               </p>
@@ -207,7 +210,7 @@
                 215 Saves <span>|</span> 5 Assist
               </p>
               <p class="text-center pt-2">
-                <button class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
+                <button id="btn-thibaut-courtois" class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
                   Select
                 </button>
               </p>
@@ -227,7 +230,7 @@
                 15 Goals <span>|</span> 9 Assist
               </p>
               <p class="text-center pt-2">
-                <button class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
+                <button id="btn-david-alaba" class="px-20 py-2 bg-blue-500 hover:bg-blue-700">
                   Select
                 </button>
               </p>
@@ -242,7 +245,7 @@
       <p class="text-center text-white my-10">Copyright @ 2022 All Rights Reserved.</p>
     </footer>
     <!-- main part ended here -->
-
+    <script src="js/common.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

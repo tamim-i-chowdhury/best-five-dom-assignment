@@ -1,57 +1,21 @@
-// Selected Five Players Field
-document
-  .getElementById("btn-karim-benzema")
-  .addEventListener("click", function () {
-    selectedFive("Karim Benzema");
-    buttonDisabled("btn-karim-benzema");
-  });
-document
-  .getElementById("btn-vinicius-junior")
-  .addEventListener("click", function () {
-    selectedFive("Vinicius Junior");
-    buttonDisabled("btn-vinicius-junior");
-  });
-document
-  .getElementById("btn-eden-hazard")
-  .addEventListener("click", function () {
-    selectedFive("Eden Hazard");
-    buttonDisabled("btn-eden-hazard");
-  });
-document
-  .getElementById("btn-luca-modric")
-  .addEventListener("click", function () {
-    selectedFive("Luka Modric");
-    buttonDisabled("btn-luca-modric");
-  });
-document.getElementById("btn-valverde").addEventListener("click", function () {
-  selectedFive("Federico Valverde");
-  buttonDisabled("btn-valverde");
-});
-document
-  .getElementById("btn-toni-kroos")
-  .addEventListener("click", function () {
-    selectedFive("Toni Kroos");
-    buttonDisabled("btn-toni-kroos");
-  });
-document
-  .getElementById("btn-daniel-carvajal")
-  .addEventListener("click", function () {
-    selectedFive("Daniel Carvajal");
-    buttonDisabled("btn-daniel-carvajal");
-  });
-document
-  .getElementById("btn-thibaut-courtois")
-  .addEventListener("click", function () {
-    selectedFive("Thibaut Courtois");
-    buttonDisabled("btn-thibaut-courtois");
-  });
-document
-  .getElementById("btn-david-alaba")
-  .addEventListener("click", function () {
-    selectedFive("David Alaba");
-    buttonDisabled("btn-david-alaba");
-  });
-
+const selectedPlayer = [];
+function selectButton(button) {
+  const playerName = button.parentNode.parentNode.children[0].innerText;
+  selectedPlayer.push(playerName);
+  // Added to the PlayerList
+  if (selectedPlayer.length <= 5) {
+    const selectedPlayerElement = document.getElementById("selected-five");
+    const li = document.createElement("li");
+    li.innerText = playerName;
+    selectedPlayerElement.appendChild(li);
+    // button disabled
+    button.disabled = true;
+    button.style.backgroundColor = "gray";
+  } else {
+    alert("Maximum player addition limit exceeded");
+    return;
+  }
+}
 // Budget
 // Calculate Total
 document.getElementById("btn-calculate").addEventListener("click", function () {
@@ -68,6 +32,8 @@ document
     // Per Player Salary
     const perPlayerSalary = getElementValue("per-player-salary");
     // Total Player Expenses
+    const numberOfPlayer = document.getElementById("selected-five").children;
+    console.log(numberOfPlayer);
     const totalPlayerExpenses = perPlayerSalary * 5;
     // Manager
     const manager = getElementValue("manager-salary");
